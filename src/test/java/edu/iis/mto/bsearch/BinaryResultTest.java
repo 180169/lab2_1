@@ -70,4 +70,11 @@ public class BinaryResultTest {
         assertFalse(BinarySearch.search(key, seq).isFound());
         assertThat( expectedOnPosition, is(BinarySearch.search(key, seq).getPosition()) );
     }
+    @Test (expected = IllegalArgumentException.class)
+    public void binarySearch_searchResult_zeroElementOnInput_expectedIllegalArgumentException(){
+        int key = 3;
+        int seq[]={};
+        
+        BinarySearch.search(key, seq);
+    }
 }
