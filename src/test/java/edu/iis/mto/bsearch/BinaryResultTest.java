@@ -19,7 +19,7 @@ import static org.junit.Assert.*;
 public class BinaryResultTest {
 
     @Test
-    public void binarySearch_searchResult_oneElementOnInput_expectedTrue() {
+    public void binarySearch_search_oneElementOnInput_expectedTrue() {
         int key = 5;
         int seq[] = {5};
 
@@ -27,7 +27,7 @@ public class BinaryResultTest {
     }
 
     @Test
-    public void binarySearch_searchResult_oneElementOnInput_expectedFalse() {
+    public void binarySearch_search_oneElementOnInput_expectedFalse() {
         int key = 5;
         int seq[] = {2};
 
@@ -35,7 +35,7 @@ public class BinaryResultTest {
     }
 
     @Test
-    public void binarySearch_searchResult_moreElementsOnInput_expectedFoundAsFirstElement() {
+    public void binarySearch_search_moreElementsOnInput_expectedFoundAsFirstElement() {
         int key = 5;
         int seq[] = {5, 6, 7, 8, 9};
         int expectedOnPosition = 1;
@@ -44,7 +44,7 @@ public class BinaryResultTest {
         assertThat( expectedOnPosition, is(BinarySearch.search(key, seq).getPosition()) );
     }
     @Test
-    public void binarySearch_searchResult_moreElementsOnInput_expectedFoundAsLastElement() {
+    public void binarySearch_search_moreElementsOnInput_expectedFoundAsLastElement() {
         int key = 9;
         int seq[] = {5, 6, 7, 8, 9};
         int expectedOnPosition = seq.length;
@@ -53,7 +53,7 @@ public class BinaryResultTest {
         assertThat( expectedOnPosition, is(BinarySearch.search(key, seq).getPosition()) );
     }
     @Test
-    public void binarySearch_searchResult_moreElementsOnInput_expectedFoundAsMiddleElement() {
+    public void binarySearch_search_moreElementsOnInput_expectedFoundAsMiddleElement() {
         int key = 7;
         int seq[] = {5, 6, 7, 8, 9};
         int expectedOnPosition = 3 ;
@@ -62,7 +62,7 @@ public class BinaryResultTest {
         assertThat( expectedOnPosition, is(BinarySearch.search(key, seq).getPosition()) );
     }
     @Test
-    public void binarySearch_searchResult_moreElementsOnInput_expectedNotFound() {
+    public void binarySearch_search_moreElementsOnInput_expectedNotFound() {
         int key = 1;
         int seq[] = {5, 6, 7, 8, 9};
         int expectedOnPosition = -1 ;
@@ -71,7 +71,7 @@ public class BinaryResultTest {
         assertThat( expectedOnPosition, is(BinarySearch.search(key, seq).getPosition()) );
     }
     @Test (expected = IllegalArgumentException.class)
-    public void binarySearch_searchResult_zeroElementOnInput_expectedIllegalArgumentException(){
+    public void binarySearch_search_zeroElementOnInput_expectedIllegalArgumentException(){
         int key = 3;
         int seq[]={};
         
